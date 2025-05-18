@@ -1,0 +1,66 @@
+import useTranslation from 'next-translate/useTranslation';
+import Button from '@root/components/button';
+import React from 'react';
+import Link from 'next/link';
+import sanitizeHtml from 'sanitize-html';
+import {defaulteImage} from '../constants';
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export default function FREELANCING_WORK({service, username}) {
+  const {t} = useTranslation();
+  var test = `/icons/services/charity${service?.percentDonated}.jpg`;
+  return (
+    <li
+      style={{backgroundImage: `url(${test})`}}
+      className='grid overflow-hidden grid-cols-6 hover:shadow-2xl hover:shadow-inherit grid-rows-7 gap-2 grid-flow-row w-auto shadow-md overflow-y-auto border border-gray-200 p-4 rounded-lg bg-no-repeat bg-right'
+      key={service.id}
+    >
+      <div className='row-start-1 col-span-2 row-span-1'>
+        <img
+          src={service?.image ? service?.image : defaulteImage.FREELANCING_WORK}
+          alt='avatar'
+          className='w-36 h-auto object-cover object-center rounded-lg'
+        />
+      </div>
+
+      <div className='box col-start-3 col-span-4 w-full flex flex-col overflow-y-auto px-2'>
+        <div className='flex justify-between'>
+          <h2 className='text-sm md:text-md font-bold line-clamp-2 text-black'>{service.title}</h2>
+          <div className='flex flex-col'>
+            <h2 className='text-md font-bold text-mainBlue mr-1'>
+              {service?.price > 0 ? `${service?.currency}${service?.price}` : t('event:Free')}
+            </h2>
+          </div>
+        </div>
+        <p className='line-clamp-3 text-sm text-gray-500 font-bold'>
+          {service?.userId?.personalDetails?.name
+            ? `By ${service?.userId?.personalDetails?.name}`
+            : null}
+          {service?.userId?.personalDetails?.headline
+            ? `, ${service?.userId?.personalDetails?.headline}`
+            : null}
+        </p>
+        <p className='line-clamp-4 md:line-clamp-6 text-xs md:text-sm'>
+          {service.description ? (
+            <div
+              className={`custom break-words `}
+              dangerouslySetInnerHTML={{__html: sanitizeHtml(service.description)}}
+            />
+          ) : null}
+        </p>
+      </div>
+      <div className='col-span-4 place-items-center flex justify-start items-center mt-auto h-3/4 gap-1'>
+        <span className='font-medium text-xs md:text-base'>{t('common:deliver_in')}</span>
+        <span className='font-bold text-sm md:text-lg text-mainBlue'>
+          {service.dueDate} {t('common:deliver_in_days')}
+        </span>
+      </div>
+
+      <div className='col-span-2 col-start-5 flex flex-col items-start justify-end'>
+        <Link href={`/${username}/${service?.slug}`} passHref={true}>
+          <Button variant='solid'>{t('common:order_now')}</Button>
+        </Link>
+      </div>
+    </li>
+  );
+}

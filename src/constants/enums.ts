@@ -1,0 +1,90 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+export enum BW_LIST {
+  BLACK_LIST = 'BLACK_LIST',
+  WHITE_LIST = 'WHITE_LIST',
+}
+
+export enum SERVICE_TYPES {
+  MEETING = 'MEETING',
+  FREELANCING_WORK = 'FREELANCING_WORK',
+  FULL_TIME_JOB = 'FULL_TIME_JOB',
+  PART_TIME_JOB = 'PART_TIME_JOB',
+  ROUND_ROBIN = 'ROUND_ROBIN',
+  EVENT = 'EVENT',
+}
+
+export enum SERVICE_TYPES_ENGLISH {
+  MEETING = 'Meeting',
+  FREELANCING_WORK = 'Freelancing',
+  FULL_TIME_JOB = 'Full-Time Job',
+  PART_TIME_JOB = 'Part-Time Job',
+  ROUND_ROBIN = 'Round Robin',
+}
+
+export enum PAYMENT_STATUS {
+  PAID = 'PAID',
+  UNPAID = 'UNPAID',
+  PENDING = 'PENDING',
+}
+
+export enum ORDER {
+  ORDER_COMPLETED = 'ORDER_COMPLETED',
+  ORDER_NOT_COMPLETED = 'ORDER_NOT_COMPLETED',
+  ORDER_CONFIRMED = 'ORDER_CONFIRMED',
+  ORDER_NOT_CONFIRMED = 'ORDER_NOT_CONFIRMED',
+  ORDER_NOT_CANCELLED = 'ORDER_NOT_CANCELLED',
+  ORDER_CANCELLED = 'ORDER_CANCELLED',
+  ORDER_CANCELLED_EVENT_NOT_DELETED = 'ORDER_CANCELLED_EVENT_NOT_DELETED',
+}
+
+export enum PAYMENT_TYPE {
+  ESCROW = 'escrow',
+  DIRECT = 'direct',
+  MANUAL = 'manual',
+}
+
+export enum PAYMENT_ACCOUNTS {
+  STRIPE = 'stripe',
+}
+
+export enum DIRECT_PAYMENT_OPTIONS {
+  STRIPE = 'stripe',
+}
+
+export enum EscrowReleaseStatus {
+  UNRELEASED = 'UNRELEASED',
+  RELEASED = 'RELEASED',
+  REFUNDED = 'REFUNDED',
+}
+
+export enum ESCROW_PAYMENT_OPTIONS {
+  NONE = 'none',
+  STRIPE = 'stripe',
+  UPI = 'upiId',
+  PAYONEER = 'payoneerId',
+  PAYPAL = 'paypalId',
+}
+
+export enum MANUAL_ESCROW_PAYMENT_OPTIONS {
+  UPI = 'upiId',
+  PAYONEER = 'payoneerId',
+  PAYPAL = 'paypalId',
+}
+
+export enum AUTHENTICATION_TYPE {
+  NONE = 'NONE',
+  VERIFIED_ONLY = 'VERIFIED_ONLY',
+  PRE_APPROVED = 'PRE_APPROVED',
+}
+
+export enum ORDER_FORM_TYPES {
+  CANCEL = 'CANCEL',
+  COMPLETE = 'COMPLETE',
+  CONFIRM = 'CONFIRM',
+}
+
+export enum PUBLIC_ORGANIZATION_FEATURES {
+  MEMBERS = 'MEMBERS',
+  SERVICES = 'SERVICES',
+  SIGN_UP = 'SIGN_UP',
+}

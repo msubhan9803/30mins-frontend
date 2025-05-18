@@ -1,0 +1,453 @@
+html {
+  scroll-behavior: smooth;
+}
+.content__container {
+  overflow: hidden;
+  height: 1.25rem;
+}
+
+.checkmark_mixed {
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.checkmark_mixed li::before {
+  content: '\2713'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ffffff; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.5em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+}
+
+.checkmark_mixed li {
+  color: rgb(255, 255, 255);
+}
+@screen sm {
+  .checkmark_mixed {
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .checkmark_mixed li::before {
+    content: '\2713'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #00a3fe; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.5em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+  }
+
+  .checkmark_mixed li {
+    color: rgb(41, 50, 65);
+  }
+}
+
+.checkmark {
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.checkmark li::before {
+  content: '\2713'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a3fe; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.5em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+}
+
+.checkmark li {
+  color: rgb(41, 50, 65);
+}
+
+.disc {
+  list-style-position: outside;
+  list-style-type: none;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.disc li::before {
+  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a3fe; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.1em; /* Also needed for space (tweak if needed) */
+}
+
+.content__container__list {
+  list-style: none;
+
+  animation-name: change;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+.content__container__list__item {
+  margin: 0;
+  padding-bottom: 0px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollable {
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes change {
+  0%,
+  7.14%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  14.28% {
+    transform: translate3d(0, -14.28%, 0);
+  }
+  21.42% {
+    transform: translate3d(0, -28.57%, 0);
+  }
+  28.57% {
+    transform: translate3d(0, -42.85%, 0);
+  }
+  35.71% {
+    transform: translate3d(0, -57.14%, 0);
+  }
+  42.85% {
+    transform: translate3d(0, -71.42%, 0);
+  }
+  53.5% {
+    transform: translate3d(0, -85.71%, 0);
+  }
+  64.28% {
+    transform: translate3d(0, -71.42%, 0);
+  }
+  71.42% {
+    transform: translate3d(0, -57.14%, 0);
+  }
+  78.54% {
+    transform: translate3d(0, -42.85%, 0);
+  }
+  85.71% {
+    transform: translate3d(0, -28.57%, 0);
+  }
+  92.85% {
+    transform: translate3d(0, -14.28%, 0);
+  }
+}
+
+.customAvailabilityLabel {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  text-align: center;
+  margin-right: 4px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  line-height: 1.5;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.custom_loader {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* li {
+  display: list-item !important;
+} */
+.ck.ck-content ul,
+.ck.ck-content ul li {
+  list-style-type: inherit;
+}
+
+.ck.ck-content ul {
+  padding-left: 40px;
+}
+
+.ck.ck-content ol,
+.ck.ck-content ol li {
+  list-style-type: decimal;
+}
+.ck.ck-content ol {
+  padding-left: 40px;
+}
+
+.ck.ck-content ul,
+.ck.ck-content ul li {
+  list-style-type: inherit;
+}
+
+.ck.ck-content strong {
+  font-weight: bold;
+}
+
+.ck-editor__editable {
+  min-height: 100px !important;
+}
+.editor-field .ck-editor__editable {
+  min-height: 16rem !important;
+  border-radius: 0 0 8px 8px !important;
+  overflow: hidden;
+  border-color: #d1d5db !important;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.editor-field .ck-toolbar {
+  border-radius: 8px 8px 0 0 !important;
+  overflow: hidden;
+  border-color: #d1d5db !important;
+}
+
+.custom {
+  word-wrap: break-word;
+}
+.custom h1 {
+  font-size: 24px;
+}
+
+.custom h2 {
+  font-size: 20px;
+}
+
+.custom h3 {
+  font-size: 16px;
+}
+
+.custom h4 {
+  font-size: 16px;
+}
+
+.custom img {
+  margin: auto;
+}
+
+.custom strong {
+  font-weight: bold;
+}
+
+.custom i {
+  font-style: italic;
+}
+
+.custom blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+.custom blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.custom blockquote p {
+  display: inline;
+}
+
+.custom td,
+th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.custom th {
+  background: lightblue;
+  border-color: white;
+}
+
+.custom ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.custom ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.group.px-6.py-3.text-left.text-xs.font-medium.text-gray-500.uppercase.tracking-wider {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border: none;
+}
+
+/* react-select-timezone wrapper */
+.timezone-wrapper {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.timezone-wrapper .css-1s2u09g-control {
+  border-color: rgb(209, 213, 219);
+}
+
+.timezone-wrapper .css-1pahdxg-control {
+  border-color: #00a3fe;
+  box-shadow: 0 0 0 1px #00a3fe;
+}
+
+.timezone-wrapper .css-1pahdxg-control:hover {
+  border-color: #00a3fe;
+}
+
+.timezone-wrapper .css-1pahdxg-control input {
+  box-shadow: none;
+}
+
+.timezone-wrapper .css-9gakcf-option {
+  background-color: #00a3fe;
+}
+
+.affiliate-wrapper .css-1s2u09g-control,
+.affiliate-wrapper .css-1pahdxg-control {
+  height: 100%;
+  border-radius: 8px;
+}
+
+.allusers-wrapper .css-1s2u09g-control,
+.allusers-wrapper .css-1pahdxg-control {
+  border-radius: 6px;
+}
+
+.booking-wrapper .css-1s2u09g-control,
+.booking-wrapper .css-1pahdxg-control {
+  border-radius: 6px;
+}
+
+.blog-content-wrapper > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.word-break-cs {
+  word-break: break-word;
+}
+
+.black-quote-wrapper > p {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.pk-share-buttons-wrap {
+  display: none;
+}
+
+.meeting-checkbox-wrapper {
+  justify-content: flex-start;
+}
+
+.meeting-checkbox-wrapper > * {
+  flex-basis: 50%;
+}
+
+@media (min-width: 400px) {
+  .meeting-checkbox-wrapper {
+    /* justify-content: space-evenly; */
+  }
+
+  .meeting-checkbox-wrapper > * {
+    flex-basis: auto;
+  }
+}
+
+.meeting-field-wrapper {
+  grid-column: span 4 / span 4;
+}
+
+@media (min-width: 360px) {
+  .meeting-field-wrapper {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* toast wrapper */
+.go2072408551 {
+  overflow: hidden;
+}
+
+.go2072408551 > div[role='status'] {
+  display: inline;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* question wrapper */
+@media (max-width: 639px) {
+  .question-wrapper {
+    flex-direction: column;
+  }
+
+  .question-wrapper > span {
+    width: 100%;
+    word-break: keep-all;
+  }
+}
