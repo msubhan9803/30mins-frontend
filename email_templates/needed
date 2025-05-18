@@ -1,0 +1,20 @@
+    {{#if ro}}
+      {{! romanian }}
+
+    {{else if ge}}
+      {{! German  }}
+
+    {{else if po}}
+      {{! portuguese }}
+
+    {{else if es}}
+      {{! esponal }}
+
+    {{else if it}}
+      {{! italian }}
+
+    {{else}}
+      {{! english }}
+
+    {{/if}}
+

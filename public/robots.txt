@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Disallow: /user/*
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://30mins.com
+
+Sitemap: https://30mins.com/sitemap-index.xml
